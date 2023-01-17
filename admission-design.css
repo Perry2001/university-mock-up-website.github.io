@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+
+}
+
+
+#title {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+/*------course----*/
+
+#card-container {
+	align-items: start;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, 300px);
+	justify-content: center;
+    padding: 2px;
+}
+/* hover effect to cards*/
+#card-container .card-item:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+#card-container .card-item {
+	background-image: linear-gradient(to left bottom, #8668681e, #040a032c, #0a140486, #1929056c, #202e0452);
+	border-radius: 5px;
+	color: black;
+	padding: 24px 0 16px;
+	text-align: center;
+	text-shadow: 1px 1px 0 #555;
+    height: auto;
+    border-radius: 13px;
+}
+.card-item h3{
+    font-size: clamp(1.875rem, 1.0938rem + 2.5vw, 2.5rem);
+    color: white;
+}
+.card-item p{
+    font-size: clamp(0.75rem, 0.125rem + 2vw, 1.0938rem);
+    color: white;
+
+}
+.course-card img {
+    width: 280px;
+    height: 250px;
+    object-fit: contain;
+  }
+  
+
+  
+
+/*------faq----*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+
+}
+
+ #faqs {
+    
+    max-width: 100vw;
+    max-height: 160vh;
+    background-color: #ABEBC6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.according-item {
+    background-color: #475f64;
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: .5rem 2px .5rem rgb(2, 0, 36);
+}
+
+.accordion-link {
+    font-size: 1.6rem;
+    color: rgba(225, 225, 255, .8);
+    text-decoration: none;
+    background-color: #283042;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+}
+
+.accordion-link i {
+    color: #e7d5ff;
+    padding: .5rem;
+}
+
+.accordion-link .ion-md-remove {
+    display: none;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #212838;
+    max-height: 650ms;
+}
+
+.answer::before {
+    content: "";
+    position: relative;
+    width: .6rem;
+    height: 90%;
+    background-color: #8fc460;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.answer p {
+    color: rgba(255, 255, 255, .6);
+    font-size: 1.4rem;
+    padding: 2rem;
+}
+
+.accordion-item:target .answer {
+    max-height: 20rem;
+}
+
+.accordion-item:target .accordion-link .ion-md-add {
+    display: none;
+
+}
+
+
+.faq {
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+
+.faq__title {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #8b7197;
+}
+
+.faq__subtitle {
+    font-size: 20px;
+}
+
+.faq__question {
+    margin: 5px;
+    background-color: #bba8c1;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    width: 70%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 40px;
+    transition: all 0.2s ease;
+}
+
+.faq__question:after {
+    content: "\02795";
+    position: absolute;
+    left: 10px;
+    font-size: 14px;
+}
+
+.faq__question_active:after {
+    content: "\2796";
+    color: white;
+    position: absolute;
+    left: 10px;
+    font-size: 14px;
+}
+
+.faq__subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.55;
+    padding-top: 8px;
+    padding-bottom: 10px;
+}
+
+.faq__panel {
+    display: none;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5;
+    padding-left: 15%;
+    max-width: 70%;
+    overflow: hidden;
+}
+
+.faq__question:hover {
+    background-color: #8b7197;
+}
+
+.faq__panel_active {
+    display: block;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    div .faq {
+        width: 100%;
+    }
+    .faq__question {
+        width: 70vw;
+    }
+    .faq__panel {
+        max-width: 100%;
+    }
+}
+    
+.faq, .one{
+    position: relative;
+    max-width: 100vw;
+}

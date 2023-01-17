@@ -1,0 +1,142 @@
+<DOCTYPE! html>
+    <html lang="en">
+
+    <head>
+        <meta charset="=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="admission-design.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+
+
+        <title>Admission</title>
+
+    <body>
+        <section>
+            <nav>
+                <div class="nav">
+                    <div class="menu" id="navLinks">
+                        <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="admission.html">Admission</a></li>
+                            <li><a href="about.html">About</a></li>
+                        </ul>
+                    </div>
+                    <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+                </div>
+            </nav>
+        
+
+
+
+        <section class="one">
+            <h3 id="title">Courses We offer</h3>
+            <div class="courses-section">
+                <div class="courses-section" id="card-container">
+                    <div class="course-card card-item">
+                        <img src="image/comp-sci.png" alt="Computer Science">
+                        <h3>Computer Science</h3>
+                        <p>Learn the principles of computer programming, data structures, algorithms, and software
+                            engineering. Study programming languages like C++, Java and Python, and gain hands-on
+                            experience with projects and labs.</p>
+                    </div>
+                    <div class="course-card card-item">
+                        <img src="image/business-management.jpg" alt="Business Management">
+                        <h3>Business Management</h3>
+                        <p>Study the fundamentals of accounting, finance, marketing, and operations management.
+                            Learn how to analyze data and make strategic business decisions. Explore the latest
+                            trends and best practices in the field through case studies and simulations.</p>
+                    </div>
+                    <div class="course-card card-item">
+                        <img src="image/history.jpg" alt="History">
+                        <h3>History</h3>
+                        <p>Study the past and its impact on the present and future. Learn about different cultures,
+                            societies, and civilizations through the ages. Analyze primary sources and historical
+                            texts to gain a deeper understanding of historical events and their significance.</p>
+                    </div>
+                    <div class="course-card card-item">
+                        <img src="image/biology.jpg" alt="Biology">
+                        <h3>Biology</h3>
+                        <p>Explore the complexity and diversity of living organisms. Learn about genetics,
+                            evolution, ecology, and psychiatry. Gain hands-on experience with experiments and lab
+                            work. Study the latest research and developments in the field.</p>
+                    </div>
+                </div><br><br>
+        </section>
+        <!---Drop and Down Faq-->
+
+
+        <section id="faqs">
+            <div class="faq">
+                <h2 class="faq__title">Frequently asked questions</h2>
+                <p class="faq__subtitle">
+                    Something is not clear? You need help? Check our FAQ section!
+                </p>
+                <button class="faq__question">How do I apply for admission to SDBICTP School?</button>
+                <div class="faq__panel">
+                    <p class="faq__answer">
+                        To apply for admission to SDBICTP School, you can visit our website and fill out the online
+                        application form. You will also need to submit any required documents, such as transcripts
+                        and test scores.
+                    </p>
+                </div>
+                <button class="faq__question">Is there an application deadline for SDBICTP School?</button>
+                <div class="faq__panel">
+                    <p class="faq__answer">
+                        Yes, there is an application deadline for SDBICTP School. The exact deadline may vary
+                        depending
+                        on the admissions cycle, but it is typically several months before the start of the term you
+                        wish to enroll in.
+                    </p>
+                </div>
+                <button class="faq__question">What are the requirements for admission to SDBICTP School?</button>
+                <div class="faq__panel">
+                    <p class="faq__answer">
+                        The requirements for admission to SDBICTP School may vary depending on the program you are
+                        applying to. Generally, you will need to have a high school diploma or equivalent, and may
+                        be required to submit transcripts, test scores, and other documents.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+
+
+        <script>
+            //faqs
+            let questions = document.querySelectorAll(".faq__question");
+            questions.forEach((question) => {
+                question.addEventListener("click", function () {
+                    question.classList.toggle("faq__question_active");
+                    const nextElement = question.nextElementSibling;
+                    nextElement.classList.toggle("faq__panel_active");
+                });
+            });
+
+            //menu
+            var navLinks = document.getElementById("navLinks");
+            function showMenu() {
+                navLinks.style.left = "0";
+            }
+            function closeMenu() {
+                navLinks.style.left = "-200px";
+            }
+
+        </script>
+
+
+        <script src="script.js"></script>
+
+
+
+
+    </body>
+    </head>
+
+    </html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="preloader">
+    <div id="loader">
+    </div>
+  </div>
+  <section class="header">
+    <nav>
+      <div class="nav">
+        <div class="menu" id="navLinks">
+          <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="admission.html">Admission</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      </div>
+    </nav>
+
+    <div class="text-box">
+      <div class="logo">
+        <img id="logo" src="image/logo.jpg" alt="logo">
+      </div>
+      <h1 style="font-weight: bolder;">Saint Dagul Batumbakal International College of The Philippines</h1>
+      <p><i>A place where dreams become reality.</p>
+      <a href="#" class="hero-btn">Enroll now</a>
+    </div>
+  </section>
+
+  <section class="update">
+    <h1>Latest Update </h1>
+    <div class="container">
+      <div class="grid-row">
+        <div class="grid-item">
+          <span>
+            <h3>Admission Announcement</h3><br>
+            <p>We are pleased to announce that our admission application for the upcoming academic year will be open from May 1st to June 30th.</p>
+          </span>
+          <a href="#">
+            <img src="image/announcement1.jpg"  />
+          </a>
+        </div>
+        <div class="grid-item">
+          <span>
+            <h3>Announcement!!</h3><br>
+            <p>We are excited to announce that we are now accepting transfer students for the upcoming academic year.</p>
+          </span>
+          <a href="#">
+            <img src="image/announcement2.jpg"  />
+          </a>
+        </div>
+        <div class="grid-item">
+          <span>
+            <h3>Congratulations Class of 2022-2023!</h3><br>
+            <p>It has been an honor to have you as a part of our community and we couldn't be more proud of your achievements.</p>
+          </span>
+          <a href="#">
+            <img src="image/announcement3.jpg"  />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="carousel">
+    <div class="slide-container">
+      <div class="slide">
+        <img
+          src="image/carousel1.jpg"
+          alt="Photo1" />
+      </div>
+      <div class="slide">
+        <img
+          src="image/carousel2.jpg"
+          alt="Photo3" />
+      </div>
+      <div class="slide">
+        <img
+          src="image/carousel3.jpg"
+          alt="Photo2" />
+      </div>
+      <div class="slide">
+        <img
+          src="image/carousel4.jpg"
+          alt="Photo3" />
+      </div>
+
+      <button class="btn-slide prev" id="prev"><i class="fas fa-3x fa-chevron-circle-left"></i></button>
+      <button class="btn-slide next" id="next"><i class="fas fa-3x fa-chevron-circle-right"></i></button>
+
+    </div>
+    <div class="dots-container">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot " data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+      <span class="dot" data-slide="3"></span>
+    </div>
+
+  </section>
+
+
+
+  <section>
+    <span class="eventbtn-container" id="event-btn">
+      <button  class="event-btn" onclick="showEvent()">Events</button>
+      <p class="typing"></p>
+    </span>
+    <div id="event" class="events">
+      <!-- <h3>/education</h3> -->
+      <div class="card">
+        <img class="event-img" src="image/event1.jpg" alt="">
+        <a href="" data-subtitle></a>
+        <em>Children's Day Celebration</em>
+        <div class="event-info">
+          <p class="event-date">02-02-2023</p>
+          <div class="description">Come and join celebrate Children's day</div>
+        </div>
+      </div>
+        <div class="card">
+          <img class="event-img" src="image/event2.jpg" alt="">
+          <a href="" data-subtitle></a>
+          <em>Welcome Back, Students!</em>
+          <div class="event-info">
+            <p class="event-date">01-05-2023</p>
+            <div class="description">We are excited to announce that the
+               "Welcome Back" event for the new academic year will take place on January 5, 2023 at School event hall. This event is a great opportunity for new and returning students to meet each other, learn about 
+              campus resources, and get involved in extracurricular activities.</div>
+          </div>
+          </div>
+          <div class="card">
+            <img class="event-img" src="image/event3.jpg" alt="">
+            <a href="" data-subtitle></a>
+            <em>Graduation Ball</em>
+            <div class="event-info">
+              <p class="event-date">01-20-2023</p>
+              <div class="description">We are excited to announce that the Graduation Ball for the 
+                Class of 2022-2023 will take place on 01-20-2023 at School event hall. This event is a celebration 
+                of the hard work and achievements of our graduating students, and a chance for them to enjoy a formal 
+                night of dancing and socializing with their classmates and friends.</div>
+            </div>
+          </div>
+          <div class="collapse-container" id="event-hideBtn">
+            <button  class="collapse-btn" onclick="closeEvent()">close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <button id="backToTopButton">Back to top</button>
+
+  <script src="script.js"></script>
+ 
+</body>
+</html>
